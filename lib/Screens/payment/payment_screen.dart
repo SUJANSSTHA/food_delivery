@@ -40,39 +40,25 @@ class PaymentScreen extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Expanded(
-                      child: Container(
-                    height: 90,
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 1,
-                    )),
-                    child: Center(child: Image.asset("assets/master_card.png")),
-                  )),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                      child: Container(
-                    height: 90,
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 1,
-                    )),
-                    child: Image.asset("assets/visa.png"),
-                  )),
-                  const SizedBox(
-                    width: 10,
-                  ),
                   // Expanded(
                   //     child: Container(
-                  //       height: 90,
+                  //   height: 90,
                   //   decoration: BoxDecoration(
                   //       border: Border.all(
                   //     width: 1,
                   //   )),
-                  //   child: Image.asset("assets/paypal.png"),
+                  //   child: Center(child: Image.asset("assets/master_card.png")),
                   // )),
+                  _paymet(image: "assets/master_card.png"),
+                  const SizedBox(
+                    width: 10,
+                  ),
+
+                  _paymet(image: "assets/visa.png"),
+                  const SizedBox(
+                    width: 10,
+                  ),
+
                   _paymet(image: "assets/paypal.png"),
                 ],
               ),
@@ -189,9 +175,11 @@ class PaymentScreen extends StatelessWidget {
         child: Container(
       height: 90,
       decoration: BoxDecoration(
-          border: Border.all(
-        width: 1,
-      )),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          width: 1,
+        ),
+      ),
       child: Image.asset(image),
     ));
   }
